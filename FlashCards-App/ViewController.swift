@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         //Card Configurations
         card.layer.cornerRadius=20.0
         card.layer.shadowRadius=15.0
-        card.layer.shadowOpacity=0.3
+        card.layer.shadowOpacity=0.2
         
         //Labels Configurations
         frontLabel.clipsToBounds=true
