@@ -5,7 +5,7 @@
 ## Lab 1
 
 ### App Description
-This app allows a user to choose a correct answer for the question 
+This app allows a user to choose a correct answer for the question as well toggle between the question and answer
 
 ### App Walk-though
 
