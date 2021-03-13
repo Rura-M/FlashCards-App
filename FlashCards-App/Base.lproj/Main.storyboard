@@ -50,7 +50,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7vW-Ow-7ng" kind="presentation" modalPresentationStyle="fullScreen" id="s0c-Gy-zXf"/>
+                                    <segue destination="y6i-ey-KU7" kind="presentation" modalPresentationStyle="fullScreen" id="s0c-Gy-zXf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="113.04347826086958" y="118.52678571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Creation View Controller-->
         <scene sceneID="baV-ha-mA9">
             <objects>
-                <viewController id="7vW-Ow-7ng" sceneMemberID="viewController">
+                <viewController id="7vW-Ow-7ng" customClass="CreationViewController" customModule="FlashCards_App" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s5g-rN-Wdn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,10 +96,35 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="gGn-J9-KyA"/>
                     </view>
+                    <navigationItem key="navigationItem" id="6cZ-4E-Gsu">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="zXm-9I-5ch">
+                            <connections>
+                                <action selector="didTapOnCancel:" destination="7vW-Ow-7ng" id="mzi-Gz-aUI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XpE-eP-VJP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="808.69565217391312" y="118.52678571428571"/>
+            <point key="canvasLocation" x="1960.8695652173915" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PIe-Je-aKt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y6i-ey-KU7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3ys-Oq-4sd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7vW-Ow-7ng" kind="relationship" relationship="rootViewController" id="iai-Uj-7Rd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mwE-ul-sWD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050.7246376811595" y="118.52678571428571"/>
         </scene>
     </scenes>
 </document>
