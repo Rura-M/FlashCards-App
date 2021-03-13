@@ -102,7 +102,16 @@
                                 <action selector="didTapOnCancel:" destination="7vW-Ow-7ng" id="mzi-Gz-aUI"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="ccv-wA-BkY">
+                            <connections>
+                                <action selector="didTapOnDone:" destination="7vW-Ow-7ng" id="vlm-QD-JjX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="answerTextField" destination="zn2-ls-whg" id="FYg-Vw-aVN"/>
+                        <outlet property="questionTextField" destination="H7J-ep-lPu" id="aV9-aY-qgk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XpE-eP-VJP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
