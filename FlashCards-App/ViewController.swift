@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         backLabel.clipsToBounds=true
         backLabel.layer.cornerRadius=20.0
         
-        //Buttons Configuration
+        /*//Buttons Configuration
         btnOptionOne.clipsToBounds=true
         btnOptionOne.layer.cornerRadius=20.0
         btnOptionOne.layer.borderWidth=3.0
@@ -49,6 +49,7 @@ class ViewController: UIViewController {
         btnOptionThree.layer.borderColor=#colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
         
         
+    }*/
     }
 
     @IBAction func didTapFlashcard(_ sender: Any) {
@@ -61,7 +62,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func didTapOptionOne(_ sender: Any) {
+    /*@IBAction func didTapOptionOne(_ sender: Any) {
         btnOptionOne.isHidden=true
     }
     
@@ -70,7 +71,7 @@ class ViewController: UIViewController {
     }
     @IBAction func didTapOptionThree(_ sender: Any) {
         btnOptionThree.isHidden=true
-    }
+    }*/
     
 }
 
