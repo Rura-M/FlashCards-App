@@ -7,7 +7,6 @@
 This app allows the user to create their own flashcard by typing in the questioin and answer
 
 ### App Walk-though
-`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
 
 <img src="https://github.com/Rura-M/FlashCards-App/blob/master/LabGifs/lab2.gif" width=200><br>
 
