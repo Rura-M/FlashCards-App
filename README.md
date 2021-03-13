@@ -9,9 +9,7 @@ This app allows the user to create their own flashcard by typing in the questioi
 ### App Walk-though
 `TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
 
-<img src="YOUR_GIF_URL_HERE" width=200><br>
-
-`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
+<img src="lab2.gif" width=200><br>
 
 ## Required
 - [x] User can open the creation screen
@@ -22,6 +20,7 @@ This app allows the user to create their own flashcard by typing in the questioi
 - [ ] User gets an error if they try to create a new flashcard with no question or answer
 - [ ] User can edit existing flashcard
 - [ ] User can add multiple choice answers in the creation screen
+
 ## Lab 1
 
 ### App Description
