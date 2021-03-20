@@ -208,6 +208,7 @@ class ViewController: UIViewController {
             }
              //Put all these cards in our flashcards array
             flashcards.append(contentsOf: savedCards)
+            //Lab one is done
         }
     }
     
