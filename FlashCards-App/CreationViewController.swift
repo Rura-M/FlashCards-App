@@ -17,10 +17,22 @@ class CreationViewController: UIViewController {
     @IBOutlet weak var answerTextField: UITextField!
     
     
+    var initialQuestion: String?
+    var initialAnswer: String?
+    //Outlets for Extra TextFields
+    @IBOutlet weak var extraAnswer1: UITextField!
+    @IBOutlet weak var extraAnswer3: UITextField!
+    var initialExtraAnswer1: String?
+    var initialExtraAnswer3: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        questionTextField.text=initialQuestion
+        answerTextField.text=initialAnswer
+        extraAnswer1.text=initialExtraAnswer1
+        extraAnswer3.text=initialExtraAnswer3
     }
     
     
@@ -30,9 +42,25 @@ class CreationViewController: UIViewController {
     
     
     @IBAction func didTapOnDone(_ sender: Any) {
+        //Initializations of question and answers
         let questionText = questionTextField.text
         let answerText=answerTextField.text
         
+        
+        //Check if empty
+        if questionText==nil || answerText==nil || questionText!.isEmpty || answerText!.isEmpty{
+            let alert = UIAlertController(title: "Missing Text", message: "You need to enter both a question and answer", preferredStyle: .alert)
+            present(alert, animated: true)
+            let okAction = UIAlertAction(title: "Ok", style: .default)
+            alert.addAction(okAction)
+        }else{
+            var isExisting = false
+            if initialQuestion != nil {
+            isExisting = true
+            }
+            }
+            
+
         flashcardsController.updateFlashcard(question: questionText!, answer: answerText!)
         
         dismiss(animated: true)

@@ -35,6 +35,26 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kE-z5-uHN">
+                                        <rect key="frame" x="227" y="85" width="46" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <state key="normal" title="✏️"/>
+                                        <connections>
+                                            <segue destination="y6i-ey-KU7" kind="show" identifier="EditSegue" id="16S-te-gBR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLp-DW-G0T">
+                                        <rect key="frame" x="8" y="8" width="46" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="❌">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapDelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zun-oP-ebp"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <gestureRecognizers/>
@@ -71,12 +91,52 @@
                                     <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zqb-df-O82"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2te-Fu-Ixh">
+                                <rect key="frame" x="98" y="433" width="211" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Birds">
+                                    <color key="titleColor" red="0.42470423709999999" green="0.1129066691" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapOnBtnOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZOp-iG-Gdg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0w-zf-0BH">
+                                <rect key="frame" x="98" y="532" width="211" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="An Umbrella">
+                                    <color key="titleColor" red="0.42470423709999999" green="0.1129066691" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapOnBtnTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mwi-1c-Lkj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyx-XD-ttp">
+                                <rect key="frame" x="98" y="624" width="211" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Dust">
+                                    <color key="titleColor" red="0.42470423709999999" green="0.1129066691" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapOnBtnThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3av-FY-ezw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="backLabel" destination="pCZ-AN-Hsb" id="6MP-OQ-fZg"/>
+                        <outlet property="btnOptionOne" destination="2te-Fu-Ixh" id="5br-oD-8N1"/>
+                        <outlet property="btnOptionThree" destination="Gyx-XD-ttp" id="g6b-ty-6C0"/>
+                        <outlet property="btnOptionTwo" destination="U0w-zf-0BH" id="tVf-jb-CdF"/>
                         <outlet property="card" destination="Drl-mq-rEL" id="AlG-Zf-AOb"/>
                         <outlet property="frontLabel" destination="qUp-5Z-y6D" id="6CH-bQ-CqF"/>
                         <outlet property="nextButton" destination="xfX-j2-mZi" id="dpk-Pt-QBf"/>
@@ -97,7 +157,7 @@
             <objects>
                 <viewController id="7vW-Ow-7ng" customClass="CreationViewController" customModule="FlashCards_App" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s5g-rN-Wdn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Question" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7J-ep-lPu">
@@ -107,7 +167,19 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zn2-ls-whg">
-                                <rect key="frame" x="60" y="431" width="291" height="34"/>
+                                <rect key="frame" x="62" y="355" width="291" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Extra Answer 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rK5-Nn-tHY">
+                                <rect key="frame" x="84" y="473" width="248" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Extra Answer 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hOo-R4-AzG">
+                                <rect key="frame" x="84" y="605" width="248" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -130,6 +202,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="answerTextField" destination="zn2-ls-whg" id="FYg-Vw-aVN"/>
+                        <outlet property="extraAnswer1" destination="rK5-Nn-tHY" id="hss-eA-YLb"/>
+                        <outlet property="extraAnswer3" destination="hOo-R4-AzG" id="3QM-wY-iLj"/>
                         <outlet property="questionTextField" destination="H7J-ep-lPu" id="aV9-aY-qgk"/>
                     </connections>
                 </viewController>
@@ -142,8 +216,9 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y6i-ey-KU7" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="SFJ-Yh-13L"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3ys-Oq-4sd">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -156,4 +231,7 @@
             <point key="canvasLocation" x="1050.7246376811595" y="118.52678571428571"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="16S-te-gBR"/>
+    </inferredMetricsTieBreakers>
 </document>

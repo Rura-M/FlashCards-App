@@ -24,10 +24,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
+    @IBOutlet weak var btnOptionOne: UIButton!
+    @IBOutlet weak var btnOptionTwo: UIButton!
+    @IBOutlet weak var btnOptionThree: UIButton!
     
-    //@IBOutlet weak var btnOptionOne: UIButton!
-    //@IBOutlet weak var btnOptionTwo: UIButton!
-    //@IBOutlet weak var btnOptionThree: UIButton!
     //Array to hold flashcards
     var flashcards=[Flashcard]()
     
@@ -47,11 +47,28 @@ class ViewController: UIViewController {
         frontLabel.layer.cornerRadius=20.0
         backLabel.clipsToBounds=true
         backLabel.layer.cornerRadius=20.0
+        
+        //Button Configurations
+        btnOptionOne.clipsToBounds=true
+        btnOptionOne.layer.cornerRadius=20.0
+        btnOptionOne.layer.borderWidth=3.0
+        btnOptionOne.layer.borderColor=#colorLiteral(red: 0.4247042371, green: 0.1129066691, blue: 1, alpha: 1)
+        
+        btnOptionTwo.clipsToBounds=true
+        btnOptionTwo.layer.cornerRadius=20.0
+        btnOptionTwo.layer.borderWidth=3.0
+        btnOptionTwo.layer.borderColor=#colorLiteral(red: 0.4247042371, green: 0.1129066691, blue: 1, alpha: 1)
+        
+        btnOptionThree.clipsToBounds=true
+        btnOptionThree.layer.cornerRadius=20.0
+        btnOptionThree.layer.borderWidth=3.0
+        btnOptionThree.layer.borderColor=#colorLiteral(red: 0.4247042371, green: 0.1129066691, blue: 1, alpha: 1)
+        
         //Read saved flashcards
         readSavedFlashcards()
         //Adding our initial flashcard if needed
         if flashcards.count == 0{
-         updateFlashcard(question: "Whats goes up when the rains come down?", answer: "An Umbrella")
+            updateFlashcard(question: "Whats goes up when the rains come down?", answer: "An Umbrella")
         }else{
             updateLabels()
             updateNextPrevButtons()
@@ -63,7 +80,26 @@ class ViewController: UIViewController {
            let creationController = navigationController.topViewController as! CreationViewController
            
            creationController.flashcardsController = self
+        
+        creationController.initialQuestion=frontLabel.text
+        creationController.initialAnswer=backLabel.text
+        if segue.identifier == "Edit Segue"{
+            creationController.initialQuestion=frontLabel.text
+                   creationController.initialAnswer=backLabel.text
+        }
        }
+    
+    @IBAction func didTapOnBtnOne(_ sender: Any) {
+        btnOptionOne.isHidden=true
+    }
+    
+    @IBAction func didTapOnBtnTwo(_ sender: Any) {
+        frontLabel.isHidden=true
+    }
+    @IBAction func didTapOnBtnThree(_ sender: Any) {
+        btnOptionThree.isHidden=true
+    }
+    
     
     @IBAction func didTapFlashcard(_ sender: Any) {
         
@@ -77,12 +113,21 @@ class ViewController: UIViewController {
     
     
     func updateFlashcard(question: String, answer: String) {
+        
         let flashcard=Flashcard(question: question, answer: answer)
+            //Replace exisitng flashcard
+            flashcards[currentIndex] = flashcard
+        
+            //Adding flashcard in the flashcards array
+            flashcards.append(flashcard)
+        
+        
         frontLabel.text=question
         backLabel.text=answer
         
-        //Adding flashcards in the array
-        flashcards.append(flashcard)
+        //btnOptionOne.setTitle(extraAnswerOne, for: .normal)
+       // btnOptionTwo.setTitle(answer, for: .normal)
+       // btnOptionThree.setTitle(extraAnswerThree, for: .normal)
         
         //Logging to console
         print("😎 Added new flashcard")
@@ -165,5 +210,32 @@ class ViewController: UIViewController {
             flashcards.append(contentsOf: savedCards)
         }
     }
+    
+    @IBAction func didTapDelete(_ sender: Any) {
+        //Show  confirmation
+        let alert = UIAlertController(title: "Delete flashcard?", message: "Are you sure you want to delete?", preferredStyle: .actionSheet)
+        present(alert, animated: true)
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive){ action in
+            self.deleteCurrentFlashcard()
+        }
+        alert.addAction(deleteAction)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(cancelAction)
+    }
+    
+    func deleteCurrentFlashcard(){
+        //Delete current
+        flashcards.remove(at: currentIndex)
+        //Special case: Check if last card was deleted
+        
+        if currentIndex>flashcards.count - 1 {
+            currentIndex=flashcards.count - 1
+        }
+        updateNextPrevButtons()
+        updateLabels()
+        saveAllFlashcardsToDisk()
+        
+    }
+    
 }
 
