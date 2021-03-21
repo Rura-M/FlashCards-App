@@ -9,7 +9,7 @@ This app allows the user to scroll through flashcards, delete and add a flashcar
 
 ### App Walk-though
 
-<img src="https://github.com/Rura-M/FlashCards-App/blob/master/LabGifs/lab3.gif" width=200><br>
+<img src="https://github.com/Rura-M/FlashCards-App/blob/master/LabGifs/ezgif.com-gif-maker.gif" width=200><br>
 
 ## Required
 - [x] User can browse through multiple flashcards
