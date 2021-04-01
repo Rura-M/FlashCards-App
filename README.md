@@ -8,7 +8,7 @@
 This app shows contains animations for flipping a flashcard as well as scrolling through the flashcards
 
 ### App Walk-though
-<img src="https://github.com/Rura-M/FlashCards-App/blob/master/LabGifs/ezgif.com-gif-maker%20(6).gif" width=200><br>
+<img src="https://github.com/Rura-M/FlashCards-App/blob/master/LabGifs/ezgif.com-gif-maker%20(7).gif" width=200><br>
 
 `TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
 
