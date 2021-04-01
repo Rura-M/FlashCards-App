@@ -108,15 +108,15 @@ class ViewController: UIViewController {
     
     func flipFlashcard(){
         UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: {
-            self.frontLabel.isHidden = true
+            if self.frontLabel.isHidden{
+                self.frontLabel.isHidden=false
+            }
+            else{
+                self.frontLabel.isHidden=true
+            }
         })
         
-        if frontLabel.isHidden{
-                frontLabel.isHidden=false
-               }
-               else{
-                   frontLabel.isHidden=true
-               }
+        
     }
     
     func animateCardOut(){
