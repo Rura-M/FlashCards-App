@@ -17,10 +17,10 @@
 ## Required
 - [x] User should see the app icon 
 - [x] User should see a splash screen
-- [ ] User should see an flip animation when revealing the answer
-- [ ] User should see a slide animation when going to the next flashcard
-- [ ] User should see a slide animation when going to the previous flashcard
-- [ ] Push code to GitHub
+- [x] User should see an flip animation when revealing the answer
+- [x] User should see a slide animation when going to the next flashcard
+- [x] User should see a slide animation when going to the previous flashcard
+- [x] Push code to GitHub
 ## Optional
 - [ ] User should see a nicer flaschard with rounded corners, shadows, and animating when showing the first time
 - [ ] User should see all views properly layout when using the app on a phone of different sizes
