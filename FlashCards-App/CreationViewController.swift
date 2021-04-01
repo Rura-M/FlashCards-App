@@ -22,8 +22,8 @@ class CreationViewController: UIViewController {
     //Outlets for Extra TextFields
     @IBOutlet weak var extraAnswer1: UITextField!
     @IBOutlet weak var extraAnswer3: UITextField!
-    var initialExtraAnswer1: String?
-    var initialExtraAnswer3: String?
+    //var initialExtraAnswer1: String?
+    //var initialExtraAnswer3: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +31,8 @@ class CreationViewController: UIViewController {
         // Do any additional setup after loading the view.
         questionTextField.text=initialQuestion
         answerTextField.text=initialAnswer
-        extraAnswer1.text=initialExtraAnswer1
-        extraAnswer3.text=initialExtraAnswer3
+        //extraAnswer1.text=initialExtraAnswer1
+        //extraAnswer3.text=initialExtraAnswer3
     }
     
     
@@ -54,13 +54,8 @@ class CreationViewController: UIViewController {
             let okAction = UIAlertAction(title: "Ok", style: .default)
             alert.addAction(okAction)
         }else{
-            var isExisting = false
-            if initialQuestion != nil {
-            isExisting = true
-            }
             }
             
-
         flashcardsController.updateFlashcard(question: questionText!, answer: answerText!)
         
         dismiss(animated: true)

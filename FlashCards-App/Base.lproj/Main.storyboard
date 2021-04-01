@@ -91,52 +91,12 @@
                                     <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zqb-df-O82"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2te-Fu-Ixh">
-                                <rect key="frame" x="98" y="433" width="211" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Birds">
-                                    <color key="titleColor" red="0.42470423709999999" green="0.1129066691" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapOnBtnOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZOp-iG-Gdg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0w-zf-0BH">
-                                <rect key="frame" x="98" y="532" width="211" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="An Umbrella">
-                                    <color key="titleColor" red="0.42470423709999999" green="0.1129066691" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapOnBtnTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mwi-1c-Lkj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyx-XD-ttp">
-                                <rect key="frame" x="98" y="624" width="211" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Dust">
-                                    <color key="titleColor" red="0.42470423709999999" green="0.1129066691" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapOnBtnThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3av-FY-ezw"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="backLabel" destination="pCZ-AN-Hsb" id="6MP-OQ-fZg"/>
-                        <outlet property="btnOptionOne" destination="2te-Fu-Ixh" id="5br-oD-8N1"/>
-                        <outlet property="btnOptionThree" destination="Gyx-XD-ttp" id="g6b-ty-6C0"/>
-                        <outlet property="btnOptionTwo" destination="U0w-zf-0BH" id="tVf-jb-CdF"/>
                         <outlet property="card" destination="Drl-mq-rEL" id="AlG-Zf-AOb"/>
                         <outlet property="frontLabel" destination="qUp-5Z-y6D" id="6CH-bQ-CqF"/>
                         <outlet property="nextButton" destination="xfX-j2-mZi" id="dpk-Pt-QBf"/>

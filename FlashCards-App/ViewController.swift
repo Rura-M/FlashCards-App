@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         backLabel.layer.cornerRadius=20.0
         
         //Button Configurations
-        btnOptionOne.clipsToBounds=true
+       /* btnOptionOne.clipsToBounds=true
         btnOptionOne.layer.cornerRadius=20.0
         btnOptionOne.layer.borderWidth=3.0
         btnOptionOne.layer.borderColor=#colorLiteral(red: 0.4247042371, green: 0.1129066691, blue: 1, alpha: 1)
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
         btnOptionThree.clipsToBounds=true
         btnOptionThree.layer.cornerRadius=20.0
         btnOptionThree.layer.borderWidth=3.0
-        btnOptionThree.layer.borderColor=#colorLiteral(red: 0.4247042371, green: 0.1129066691, blue: 1, alpha: 1)
+        btnOptionThree.layer.borderColor=#colorLiteral(red: 0.4247042371, green: 0.1129066691, blue: 1, alpha: 1)*/
         
         //Read saved flashcards
         readSavedFlashcards()
